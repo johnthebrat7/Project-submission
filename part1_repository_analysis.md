@@ -28,9 +28,9 @@ for Airbyte: Eventhough python is the largest language by a very thin margin the
 | Category | Details |
 |----------|----------|
 | **Primary Purpose** | asyncio client library for Apache Kafka |
-| **Key Dependencies** | async-timeout, typing_extensions, packaging, Cython, cramjam, gssapi |
-| **Architecture Patterns** | 1. Async event-driven I/O (asyncio)<br>2. Producer/Consumer pattern<br>3. Consumer-group coordination & cooperative rebalancing<br>4. Cython-accelerated performance-critical paths |
-| **Target Use Case / Domain** | Backend developers building async streaming systems, event-driven microservices, log aggregation pipelines, and distributed data-processing applications using Python ≥ 3.10 |
+| **Key Dependencies** | async timeout, typing_extensions, packaging, Cython, cramjam, gssapi |
+| **Architecture Patterns** | 1. Async event-driven I/O (asyncio)<br>2. Producer/Consumer pattern<br>3. Consumer group coordination & cooperative rebalancing<br>4. Cython accelerated performance critical paths |
+| **Target Use Case / Domain** | Backend developers building async streaming systems, event driven microservices, log aggregation pipelines, and distributed data-processing applications using Python ≥ 3.10 |
 
 ---
 
