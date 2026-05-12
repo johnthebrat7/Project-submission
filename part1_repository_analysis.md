@@ -5,28 +5,27 @@ Repo - aio-libs/aiokafka
 Python % - 93.1
 Other Languages - Cython 5.1%, C 1.1%
 Strictly Python-Primary - Yes
------------------------------------------------------
+
 Repo - airbytehq/airbyte
 Python % - 51.3
 Other Languages - Kotlin 37.6%, Java 8.6%
 Strictly Python-Primary - No , its polyglot
--------------------------------------------------
+
 Repo - artefactual/archivematica
 Python % - 83
 Other Languages - TypeScript 8.5%, Vue 4.8%, HTML 2.8%
 Strictly Python-Primary - Yes
-------------------------------------------
+
 Repo - beetbox/beets
 Python % - 96.2
 Other Languages - JavaScript 3.3%
 Strictly Python-Primary - Yes
----------------------------------------------------
+
 Repo - FoundationAgents/MetaGPT
 Python % - 97.5
 Other Languages - Other 2.5%
 Strictly Python-Primary - Yes
 
-------------------------------------------------------------
 
 
 for Airbyte: Eventhough python is the largest language by a very thin margin the remaining part of the code base is Kotlin + Java . Because the platform on which its built is JVM based so I'm not including it into my detailed summary section.
