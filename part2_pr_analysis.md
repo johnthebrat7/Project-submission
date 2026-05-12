@@ -12,19 +12,19 @@ A minor inefficiency in MetaGPT's RAG module is that in cases where users pass i
 # TECHINCAL CHANGES
 
 
-1. metagpt/rag/engines/simple.py — removes direct VectorStoreIndex dependency; introduces a transformations-based architecture; adds a new _from_nodes constructor pat
+1. metagpt/rag/engines/simple.py — removes direct VectorStoreIndex dependency, introduces a transformations-based architecture, adds a new _from_nodes constructor path.
 
 2. metagpt/rag/factories/retriever.py — adds decorators that drive a dynamic build-vs-retrieve decision based on config
 
-3. metagpt/rag/factories/base.py — improves ConfigBasedFactory error messages; _val_from_config_or_kwargs now returns None instead of raising KeyError
+3. metagpt/rag/factories/base.py — improves ConfigBasedFactory error messages , _val_from_config_or_kwargs now returns None instead of raising KeyError
 
 4. examples/rag_pipeline.py — adds docstrings to RAGExample and wraps async methods in exception-handling decorators
 
-5. tests/metagpt/rag/engines/test_simple.py — replaces VectorStoreIndex-coupled mocks with transformations-path mocks
+5. tests/metagpt/rag/engines/test_simple.py — replaces VectorStoreIndex coupled mocks with transformations path mocks
 
-6. tests/metagpt/rag/factories/test_base.py — updated to assert None return rather than expected exception
+6. tests/metagpt/rag/factories/test_base.py — updated to assert None return rather than expected exception.
 
-7. tests/metagpt/rag/factories/test_retriever.py — new tests covering the dynamic build-or-retrieve branches (+37/-13)
+7. tests/metagpt/rag/factories/test_retriever.py — new tests covering the dynamic build-or-retrieve branches.
 
 
 -----------------------------------------------------
