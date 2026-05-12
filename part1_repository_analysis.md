@@ -19,99 +19,51 @@ for Airbyte: Eventhough python is the largest language by a very thin margin the
 # COMPARISON TABLE
 
 
-# REPO - aiokafka
+# Repository Architecture & Dependency Analysis
 
-** Primary Purpose - ** 
+---
 
-asyncio client library for Apache Kafka
+# REPO — aiokafka
 
-** Key Dependencies- **
+| Category | Details |
+|----------|----------|
+| **Primary Purpose** | asyncio client library for Apache Kafka |
+| **Key Dependencies** | async-timeout, typing_extensions, packaging, Cython, cramjam, gssapi |
+| **Architecture Patterns** | 1. Async event-driven I/O (asyncio)<br>2. Producer/Consumer pattern<br>3. Consumer-group coordination & cooperative rebalancing<br>4. Cython-accelerated performance-critical paths |
+| **Target Use Case / Domain** | Backend developers building async streaming systems, event-driven microservices, log aggregation pipelines, and distributed data-processing applications using Python ≥ 3.10 |
 
-async-timeout, typing_extensions, packaging; Cython for C-extensions; cramjam (snappy/lz4/zstd compression), gssapi (Kerberos SASL)
+---
 
-** Architecture Patterns ** 
+# REPO — archivematica
 
-1.Async event-driven I/O (asyncio)
-2.Producer/Consumer pattern
-3.Coordinator-group consumer (cooperative rebalancing)
-4.Cython-accelerated hot paths
+| Category | Details |
+|----------|----------|
+| **Primary Purpose** | Web-based digital preservation platform for archives and libraries |
+| **Key Dependencies** | Django, Gearman, MySQL/MariaDB drivers, lxml, METS/PREMIS libraries, Elasticsearch client |
+| **Architecture Patterns** | 1. Workflow/Pipeline orchestration<br>2. Master–Worker architecture (MCPServer + MCPClient)<br>3. MVC-based Django web application<br>4. Distributed microservice architecture using Gearman & HTTP<br>5. OAIS-compliant SIP → AIP → DIP preservation workflow |
+| **Target Use Case / Domain** | GLAM sector (Galleries, Libraries, Archives, Museums), government records management, long-term digital preservation systems |
 
+---
 
-** Target Use Case / Domain ** 
+# REPO — beets
 
-Backend developers building async data pipelines, streaming microservices, log aggregation, event-driven systems on Python ≥ 3.10
+| Category | Details |
+|----------|----------|
+| **Primary Purpose** | Music library manager and MusicBrainz-powered auto-tagger |
+| **Key Dependencies** | mutagen, musicbrainzngs, requests, jellyfish, mediafile, PyYAML, confuse |
+| **Architecture Patterns** | 1. Plugin-based extensible architecture<br>2. Library + CLI frontend design<br>3. Hook/event-driven extensibility system<br>4. Repository pattern using SQLite-backed metadata catalog |
+| **Target Use Case / Domain** | Audiophiles and advanced users managing large personal music libraries and media-server ecosystems (Plex, MPD, Subsonic) |
 
----------------------------------------------------------------
+---
 
-# REPO - archivematica
+# REPO — MetaGPT
 
-** Primary Purpose - ** 
-
-Web-based digital-preservation system for archives/libraries
-
-
-** Key Dependencies- **
-
-Django, Gearman, MySQL/MariaDB driver, lxml, METS/PREMIS libs, agentarchives, Elasticsearch client
-
-** Architecture Patterns ** 
-
-1.Pipeline / workflow orchestration• Master–Worker (MCPServer + MCPClient)
-2.MVC web app (Django dashboard)
-3.icroservice split: dashboard, MCPServer, Storage Service, FPR — communicate over Gearman/HTTP
-4.OAIS-compliant SIP→AIP→DIP flow
-
-
-** Target Use Case / Domain ** 
-
-GLAM sector — archivists, librarians, museum/government records managers needing OAIS-compliant long-term digital preservation
-
-----------------------------------------------------------------
-
-# REPO - beets
-
-** Primary Purpose - ** 
-
-Music library manager & MusicBrainz auto-tagger
-
-** Key Dependencies- **
-
-mutagen (audio tags), musicbrainzngs, requests, jellyfish, mediafile, PyYAML, confuse
-
-** Architecture Patterns ** 
-
-1.Plugin architecture (beetsplug/ namespace)
-2.Library + CLI front-end
-3.Hook/event system for plugin extensibility
-4.Repository pattern over a SQLite-backed catalog
-
-** Target Use Case / Domain ** 
-
-Audiophiles / power users managing personal music collections; servers for media stacks (Plex, Subsonic, MPD)
-
--------------------------------------------------------------
-
-# REPO - MetaGPT
-
-** Primary Purpose - ** 
-Multi-agent LLM framework that simulates an AI software company
-
-
-** Key Dependencies- **
-
-OpenAI/Anthropic SDKs, pydantic, tenacity, aiohttp, tiktoken, qdrant/chroma (vector stores), playwright, langchain-compatible utilities
-
-
-** Architecture Patterns ** 
-
-1.Multi-agent system with role specialization (PM, Architect, Engineer, QA, …)
-2.SOP-driven orchestration (Code = SOP(Team))
-3.Message-passing / shared environment "Memory"
-4.Action–Role abstraction; pub/sub for inter-agent events
-
-** Target Use Case / Domain ** 
-
-AI/LLM researchers and developers building autonomous agent teams; rapid prototyping ("one-line requirement → repo")
+| Category | Details |
+|----------|----------|
+| **Primary Purpose** | Multi-agent LLM framework simulating an AI software company |
+| **Key Dependencies** | OpenAI/Anthropic SDKs, pydantic, tenacity, aiohttp, tiktoken, qdrant/chroma, playwright, langchain-compatible utilities |
+| **Architecture Patterns** | 1. Multi-agent role-specialization architecture<br>2. SOP-driven orchestration (Code = SOP(Team))<br>3. Shared-memory/message-passing environment<br>4. Action–Role abstraction model<br>5. Pub/Sub inter-agent communication system |
+| **Target Use Case / Domain** | AI researchers and developers building autonomous agent systems, collaborative LLM workflows, and AI-driven software engineering pipelines |
 
 ------------------------------------------------------------
 
