@@ -1,4 +1,4 @@
-** Since MetaGPT has highest involvement of python I will be evaluating it for this particular section. **
+Since MetaGPT has highest involvement of python I will be evaluating it for this particular section.
 
 PR 1:#1224 — Fixing the potential duplicate embeddings in the RAG module
 
